@@ -28,12 +28,11 @@ app.use((err, req, res, next) => {
 
 app.get("/", async (req, res) => {
   res.status(200).json({
-    message: "Hello developers from GFG",
+    message: "Hello developers from Jayesh J",
   });
 });
 
 const connectDB = () => {
-  // console.log(process.env.MONGODB_URL);
   mongoose.set("strictQuery", true);
   mongoose
     .connect(process.env.MONGODB_URL)
