@@ -91,10 +91,11 @@ const Home = () => {
       setFilteredPost(posts);
     }
     const filteredPosts = posts.filter((post) => {
-      const promptMatch = post?.prompt?.toLowerCase().includes(search);
-      const authorMatch = post?.author?.toLowerCase().includes(search);
+      const lowerSearch = search.toLowerCase();
+      const promptMatch = post?.prompt?.toLowerCase().includes(lowerSearch);
+      const nameMatch = post?.name?.toLowerCase().includes(lowerSearch);
 
-      return promptMatch || authorMatch;
+      return promptMatch || nameMatch;
     });
 
     if (search) {

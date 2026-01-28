@@ -69,9 +69,13 @@ const GenerateImage = ({
       if (!photo) {
         throw new Error(res?.data?.message || "No image returned from server");
       }
+      const finalSrc =
+        typeof photo === "string" && photo.startsWith("data:")
+          ? photo
+          : `data:${ct};base64,${photo}`;
       setPost({
         ...post,
-        photo: `data:${ct};base64,${photo}`,
+        photo: finalSrc,
       });
     } catch (error) {
       console.error("API Error:", error);

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import GenerateImage from "../components/form/GenerateImageForm.jsx";
 import GeneratedImageCard from "../components/cards/GenerateImageCard.jsx";
 
+
 const Container = styled.div`
   padding: 20px 30px;
   padding-bottom: 50px;

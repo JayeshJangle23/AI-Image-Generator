@@ -11,10 +11,12 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@google/genai": "^1.38.0",
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
+    "dotenv": "^16.4.5",
     "express": "^5.1.0",
+    "http-errors": "^2.0.0",
     "mongoose": "^8.17.0",
     "nodemon": "^3.1.10",
     "openai": "^5.11.0"
